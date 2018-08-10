@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+$this->resource('posts','Posts\PostController');
+$this->post('comment', 'Posts\CommentController@store')->name('comment.store');
