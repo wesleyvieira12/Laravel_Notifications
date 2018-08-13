@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+$this->get('notifications','NotificationsController@notifications')->name('notifications');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
